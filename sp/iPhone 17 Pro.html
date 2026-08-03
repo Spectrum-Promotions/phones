@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/x-icon" href="./content/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>iPhone 17 Pro</title>
+
+<style>
+
+  @media screen and (max-width: 600px) {
+  /* CSS rules to be applied when the viewport width is 600px or less */
+  .feature_section {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+}
+
+  
+  .checkoutbtn {
+    text-decoration:none;
+  }
+  input#promoCode {
+    padding: 10px 20px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    background: white;
+    margin-top: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    opacity: 70%;
+}
+input#promoCode:focus-visible {
+    border: 2px solid #00194A !important;
+    background: #ffffff;
+    opacity: 95% !important;
+    outline: none !important;
+}
+.promo button {
+    border-width: 0px;
+    border-radius: 4px;
+    font-size: 14px;
+    margin-left: 30px;
+    letter-spacing: -0.8px;
+    overflow-wrap: break-word;
+    font-weight: 700;
+    font-family: 'Inter';
+    padding: 10px 32px;
+    cursor: pointer;
+    background: none #00194A;
+    transition: background 0.2s;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    transition:0.5s;
+}
+.promo button:hover {
+    box-shadow: 0px 0px 0px 0.0625rem;
+    background-color: rgb(255, 255, 255);
+    color: #00194A;
+}
+p#discountMsg {
+    color: rgb(42, 44, 46);
+    opacity: 80%;
+    font-family: 'Inter';
+    font-weight: bold;
+    margin-top: 18px;
+}
+* { box-sizing: border-box; margin:0; padding:0; }
+
+body {
+  font-family: 'Inter';
+  background: #FFFFFF;
+  color: #2B2B2B;
+}
+
+.container {
+  padding: 40px 6%;
+}
+
+h1 {
+  font-size: clamp(28px,4vw,38px);
+  color: #4B286D;
+  margin-bottom: 15px;
+}
+
+.product {
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+/* IMAGE SECTION */
+.img-gallery {
+  flex:1 1 400px;
+  position: relative;
+}
+
+.main-img {
+  width:100%;
+  height: 400px;
+  object-fit: contain;
+  background: #ffffff;
+  border-radius: 12px;
+}
+
+.thumbs {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+
+.thumbs img {
+  width: 60px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.thumbs img.active {
+  border: 2px solid #4B286D;
+}
+
+/* ARROWS */
+.arrow-btn {
+  position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    background: #ffffffd9;
+    border: none;
+    cursor: pointer;
+    padding: 12px 13px;
+    font-size: 30px;
+    border-radius: 50%;
+}
+
+.arrow-left { left: -20px; }
+.arrow-right { right: -20px; }
+
+/* DETAILS */
+.details {
+  flex:1 1 350px;
+}
+
+.price {
+  font-size: 30px;
+    font-weight: 400;
+    color: #00194A;
+    margin: 12px 0;
+    font-family: 'Inter';
+}
+
+/* SELECTORS */
+.selector-group {
+  margin: 25px 0;
+}
+button.buy-btn {
+    margin-top: 40px !important;
+}
+.selector-group h4 {
+  font-size: 16px;
+  color: #4B286D;
+  margin-bottom: 8px;
+}
+
+#colorName {
+  color: #00194A;
+  font-weight: bold;
+}
+
+.options {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.option {
+  padding: 8px 14px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  cursor: pointer;
+  background: white;
+}
+.option.stogr.selected {
+    border: 2px solid #00194A;
+    border-radius: 4px;
+}
+.option.stogr{
+border-radius: 4px;
+}
+.option.selected {
+  border: solid #00194A;
+    background: #ffffff;
+    opacity: 100% !important;
+}
+button.buy-btn:hover {
+    box-shadow: 0px 0px 0px 0.0625rem;
+    background-color: rgb(255, 255, 255);
+    color: #00194A;
+}
+button.buy-btn {
+    border-width: 0px;
+    border-radius: 4px;
+    font-size: 1rem;
+    letter-spacing: -0.8px;
+    line-height: 1.5;
+    overflow-wrap: break-word;
+    font-weight: 700;
+    font-family: 'Inter';
+    margin: 0px;
+    padding: 10px 60px;
+    cursor: pointer;
+    background: none #00194A;
+    transition: background 0.2s;
+    display: flex;
+    width: unset;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 3.25rem;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+.selector-group h4 {
+    font-family: inherit;
+    transition: 0.5s;
+    font-weight: 700;
+    color: rgb(65, 69, 71);
+}
+/* COLOR DOTS */
+.color-dot {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+}
+
+.color-dot.selected {
+    border: 1px solid rgb(103, 110, 115);
+    box-shadow: rgb(255 255 255) 0px 0px 0px 2px, rgb(103, 110, 115) 0px 0px 0px 3px;
+}
+
+/* BUTTON */
+.buy-btn {
+  margin-top: 25px;
+  padding: 14px;
+  width: 100%;
+  background: #66CC00;
+  color: #fff;
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+div#colorOpts {
+    margin-top: 18px;
+}
+span#colorName {
+    color: rgb(42, 44, 46);
+    opacity: 80%;
+}
+.buy-btn:hover {
+  background: #2B8000;
+}
+/* SCROLL ANIMATION BASE */
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+/* LEFT ANIMATION */
+.fade-left {
+  opacity: 0;
+  transform: translateX(-60px);
+  transition: all 0.8s ease;
+}
+p.awarded {
+    color: rgb(42, 44, 46);
+    overflow-wrap: break-word;
+    font-weight: 500;
+    font-family: math;
+    font-size: 14px;
+    margin-top: 10px;
+}
+/* RIGHT ANIMATION */
+.fade-right {
+  opacity: 0;
+  transform: translateX(60px);
+  transition: all 0.8s ease;
+}
+
+/* ACTIVE STATE */
+.show {
+  opacity: 1;
+  transform: translate(0,0);
+}
+h1.Heading__StyledHeading-mpz92r-0.kQzvTD {
+    margin: 0px 0 5px;
+    color: rgb(75, 40, 109);
+    text-align: left;
+    text-transform: none;
+    text-decoration-line: none;
+    font-family: sans-serif;
+    transition: 0.5s;
+    font-weight: 400;
+    opacity: 97%;
+}
+.option {
+    font-size: 14px;
+    font-weight: 600;
+    word-spacing: -3px;
+}
+.option.stogr {
+    opacity: 70%;
+}
+/* FEATURES */
+.features {
+  margin-top: 40px;
+  border-top: 1px solid #eee;
+}
+
+.feature-item {
+  border-bottom: 1px solid #eee;
+}
+
+/* TITLE */
+.feature-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+  cursor: pointer;
+  font-weight: 600;
+  color: #4B286D;
+  transition: 0.3s;
+}
+
+.feature-title:hover {
+  color: #2B8000;
+}
+
+/* ICON */
+.feature-title i {
+  font-style: normal;
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+/* CONTENT */
+.feature-content {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.35s ease;
+  color: #555;
+  font-size: 14px;
+}
+
+/* ACTIVE STATE */
+.feature-item.active .feature-content {
+  padding-bottom: 12px;
+}
+
+.feature-item.active .feature-title i {
+  transform: rotate(45deg); /* + becomes × */
+}
+.feature_section {
+    padding-left: 80px;
+    padding-right: 80px;
+}
+.feature-title:hover {
+    color: #4B286D;
+    opacity: 100%;
+}
+.feature-content img {
+    height: unset;
+    width: 100%;
+    padding: 0px 40px;
+}
+.feature-title {
+    font-size: 16px;
+    opacity: 75%;
+    font-family: monospace;
+    color: #4B286D;
+}
+/* RESPONSIVE */
+@media (max-width:850px){
+  .product { flex-direction: column; align-items: center; }
+  .img-gallery,.details { flex:1 1 100%; }
+  .main-img { height: 300px; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="product">
+
+<!-- IMAGE GALLERY -->
+<div class="img-gallery fade-left">
+  <button class="arrow-btn arrow-left" onclick="prevImage()">‹</button>
+  <img id="mainImg" class="main-img">
+  <button class="arrow-btn arrow-right" onclick="nextImage()">›</button>
+  <div class="thumbs" id="thumbs"></div>
+</div>
+
+<!-- DETAILS -->
+<div class="details fade-right show">
+<div dir="auto" class="css-1rynq56" style="color: rgb(65, 69, 71); text-transform: none;
+     text-decoration-line: none; font-size: 14px; line-height: 24px; font-family: revert-layer; font-weight: 700;
+    opacity: 90%;
+    margin-top: 20px;
+    text-align: left;">Apple
+  </div>
+  <h1 data-testid="heading" class="Heading__StyledHeading-mpz92r-0 kQzvTD">iPhone 17 Pro</h1>
+  <p class="awarded">Experience Samsung Galaxy iPhone 17 Pro on Canada's most-awarded network</p>
+<p class="price" id="price">$32</p>
+
+<!-- STORAGE -->
+<div class="selector-group">
+  <h4>Memory options:</h4>
+  <div class="options" id="storageOpts">
+    <div class="option stogr selected" onclick="selectStorage(this,0)" data-storage="256" data-price="800">256 GB</div>
+    <div class="option stogr" onclick="selectStorage(this,1)" data-storage="256" data-price="900">512 GB</div>
+    <div class="option stogr" onclick="selectStorage(this,2)" data-storage="256" data-price="1000">1 TB</div>
+  </div>
+</div>
+
+<!-- COLOR -->
+<div class="selector-group">
+  <h4>Colour options:</h4>
+    <span id="colorName">Deep Blue</span>
+  <div class="options" id="colorOpts">
+    <div class="option color-dot selected"
+      style="background:#394673"
+      onclick="selectColor(this,'blue','Deep Blue')"></div>
+
+    <div class="option color-dot"
+      style="background:#F77E2D"
+      onclick="selectColor(this,'orange','Cosmic Orange')"></div>
+      <div class="option color-dot"
+      style="background:#E5E5E5"
+      onclick="selectColor(this,'silver','Silver')"></div>
+  </div>
+</div>
+<div class="promo">
+<input type="text" id="promoCode" placeholder="Enter Promo Code">
+<button onclick="applyPromo()">Apply</button>
+
+<p id="discountMsg"></p>
+</div>
+  
+  <button id="buyNowBtn" class="buy-btn">Buy Now</button>
+
+</div>
+
+</div>
+
+</div>
+<div class="feature_section">
+    <div class="features">
+
+    <div class="feature-item">
+        <div class="feature-title">
+        <span>Features</span>
+        <i>+</i>
+        </div>
+        <div class="feature-content">
+        <img src="https://telus-promotions.github.io/our-plans/hero_largemga.webp">
+        <img src="https://telus-promotions.github.io/our-plans/ai_ios_largeldfok.webp">
+        </div>
+    </div>
+    </div>
+</div>
+<script>
+// DATA
+const productImages = {
+  blue: [
+    "https://telus-promotions.github.io/our-plans/Blk_iPhone_17_Pro_Deep_Blue_PDP_Image_Position_1__CAEN.png",
+    "https://telus-promotions.github.io/our-plans/Blk_iPhone_17_Pro_Deep_Blue_PDP_Image_Position_2__CAEN.png",
+    "https://telus-promotions.github.io/our-plans/Blk_iPhone_17_Pro_Deep_Blue_PDP_Image_Position_3__CAFR.png",
+    "https://telus-promotions.github.io/our-plans/Blk_iPhone_17_Pro_Deep_Blue_PDP_Image_Position_4__CAEN.png"
+  ],
+  orange: [
+    "https://telus-promotions.github.io/our-plans/orange_iPhone_17_Pro_Cosmic_Orange_PDP_Image_CAEN.png",
+    "https://telus-promotions.github.io/our-plans/orange_iPhone_17_Pro_Cosmic_Orange_PDP_Image_Position_2__CAEN.png",
+    "https://telus-promotions.github.io/our-plans/orange_iPhone_17_Pro_Cosmic_Orange_PDP_Image_Position_3__CAEN.png",
+    "https://telus-promotions.github.io/our-plans/orange_iPhone_17_Pro_Cosmic_Orange_PDP_Image_Position_4__CAEN.png"
+  ],
+  silver: [
+    "https://telus-promotions.github.io/our-plans/ProMax_Silver_iPhone_17_Pro_Silver_PDP_Image_CAEN.png",
+    "https://telus-promotions.github.io/our-plans/ProMax_Silver_iPhone_17_Pro_Silver_PDP_Image_Position_2__CAEN.png",
+    "https://telus-promotions.github.io/our-plans/ProMax_Silver_iPhone_17_Pro_Silver_PDP_Image_Position_3__CAFR-.png",
+    "https://telus-promotions.github.io/our-plans/ProMax_Silver_iPhone_17_Pro_Silver_PDP_Image_Position_4__CAEN.png"
+  ]
+};
+
+const storagePrices = [32,42,50];
+
+let currentColor = 'blue';
+let currentImgIndex = 0;
+
+/* THUMBS */
+function renderThumbs(){
+  let box = document.getElementById("thumbs");
+  box.innerHTML = "";
+
+  productImages[currentColor].forEach((src,i)=>{
+    let img = document.createElement("img");
+    img.src = src;
+    img.onclick = ()=>showImage(i);
+    if(i===0) img.classList.add("active");
+    box.appendChild(img);
+  });
+}
+
+/* IMAGE CHANGE */
+function showImage(i){
+  currentImgIndex = i;
+  document.getElementById("mainImg").src = productImages[currentColor][i];
+
+  document.querySelectorAll("#thumbs img").forEach((t,idx)=>{
+    t.classList.toggle("active", idx===i);
+  });
+}
+
+/* SLIDER */
+function nextImage(){
+  showImage((currentImgIndex+1)%productImages[currentColor].length);
+}
+
+function prevImage(){
+  let len = productImages[currentColor].length;
+  showImage((currentImgIndex-1+len)%len);
+}
+
+/* COLOR */
+function selectColor(el,color,name){
+  currentColor = color;
+
+  document.querySelectorAll("#colorOpts .option")
+    .forEach(o=>o.classList.remove("selected"));
+
+  el.classList.add("selected");
+
+  document.getElementById("colorName").innerText = name;
+
+  showImage(0);
+  renderThumbs();
+}
+
+/* STORAGE */
+function selectStorage(el,idx){
+  document.querySelectorAll("#storageOpts .option")
+    .forEach(o=>o.classList.remove("selected"));
+
+  el.classList.add("selected");
+
+  document.getElementById("price").innerText = "$"+storagePrices[idx];
+}
+
+/* INIT */
+renderThumbs();
+showImage(0);
+</script>
+<script>
+    const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    }
+  });
+}, {
+  threshold: 0.2
+});
+
+document.querySelectorAll('.fade-left, .fade-right, .fade-in')
+  .forEach(el => observer.observe(el));
+</script>
+<script>
+    document.querySelectorAll(".feature-title").forEach(title => {
+  title.addEventListener("click", () => {
+    const item = title.parentElement;
+    const content = item.querySelector(".feature-content");
+
+    // CLOSE ALL OTHER ITEMS
+    document.querySelectorAll(".feature-item").forEach(i => {
+      if (i !== item) {
+        i.classList.remove("active");
+        i.querySelector(".feature-content").style.height = "0px";
+      }
+    });
+
+    // TOGGLE CURRENT
+    if (item.classList.contains("active")) {
+      item.classList.remove("active");
+      content.style.height = "0px";
+    } else {
+      item.classList.add("active");
+      content.style.height = content.scrollHeight + "px";
+    }
+  });
+});
+</script>
+  <script>
+let originalPrice = 32;
+let currentPrice = originalPrice;
+
+function applyPromo() {
+  const code = document.getElementById("promoCode").value.trim().toUpperCase();
+  let discount = 0;
+
+  if(code === "TELUSLOYAL8945") discount = 1;
+  else {
+    document.getElementById("discountMsg").innerText = "Invalid Code.";
+    currentPrice = originalPrice;
+    document.getElementById("price").innerText = "$" + Math.round(currentPrice);
+    return;
+  }
+
+  currentPrice = originalPrice - (originalPrice * discount);
+  document.getElementById("price").innerText = "$" + Math.round(currentPrice);
+  document.getElementById("discountMsg").innerText = "Promo Applied.";
+}
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const buyButton = document.getElementById("buyNowBtn");
+  const promoMsg = document.getElementById("discountMsg");
+
+  buyButton.addEventListener("click", function() {
+    if(promoMsg.innerText !== "Promo Applied.") {
+      alert("You are not eligible for this upgrade at this time.");
+      return;
+    }
+    // Promo applied, proceed to checkout
+    window.location.href = "https://telus-promotions.github.io/our-plans/checkout";
+  });
+});
+</script>
+</body>
+</html>
