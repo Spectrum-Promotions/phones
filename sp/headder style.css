@@ -4,6 +4,9 @@
     flex-direction: column;
     padding: 20px;
 }
+.headerlogo{
+    margin:0 auto;
+}
 body {
     background-color: #F8F8F8;
 }
