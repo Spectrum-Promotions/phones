@@ -5,7 +5,7 @@
     padding: 20px;
 }
 .headerlogo{
-    margin:0 auto;
+    margin:0 auto !important;
 }
 body {
     background-color: #F8F8F8;
